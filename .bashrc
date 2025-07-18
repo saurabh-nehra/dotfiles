@@ -12,7 +12,7 @@ PS1='[\u@\h \W]\$ '
 export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/init-nvm.sh
 export PATH="$HOME/.local/bin:$PATH"
-eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/space.omp.json')"
+eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 alias eos_update="eos-update --faillock-check --aur"
 alias ls="eza --long --group-directories-first --binary --no-permissions --octal-permissions --icons"
