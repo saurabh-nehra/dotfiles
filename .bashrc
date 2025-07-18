@@ -20,3 +20,4 @@ alias cd="z"
 alias cdi="zi"
 alias find="fd"
 alias dust="du"
+alias config='/usr/bin/git --git-dir=/home/saurabh/.cfg/ --work-tree=/home/saurabh'
