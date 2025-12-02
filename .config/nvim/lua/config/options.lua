@@ -11,6 +11,11 @@ vim.opt.number = false
 vim.opt.relativenumber = false
 vim.g.lazyvim_python_lsp = "basedpyright"
 
+-- soft wrap
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+
 -- by @dpetka2001Add commentMore actions
 -- needed to make sure the spec of the Extra gets added first, so other Extras can add onto it
 -- See also treesitter-rewrite.lua

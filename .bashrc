@@ -20,12 +20,11 @@ alias ls="eza --long --group-directories-first --binary --no-permissions --octal
 alias cd="z"
 alias cdi="zi"
 alias find="fd"
-alias dust="du"
 alias config='/usr/bin/git --git-dir=/home/saurabh/.cfg/ --work-tree=/home/saurabh'
 alias bats='BATS_RUN_SKIPPED=true command bats *.bats'
 alias rm='rip -i'
 alias playground='distrobox-enter arch-test -nw'
-
+alias mirror_update='sudo reflector --latest 20 --country India --sort rate --save /etc/pacman.d/mirrorlist'
 # Only in foot terminal
 if [ "$TERM" = "foot" ] && command -v tmux &>/dev/null; then
   if [ -z "$TMUX" ]; then
