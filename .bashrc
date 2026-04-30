@@ -13,6 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/init-nvm.sh
 export PATH="$HOME/.local/bin:$PATH:$HOME/bin"
 export MANPAGER="nvim +Man!"
+export GPG_TTY=$(tty)
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 alias eos_update="eos-update --faillock-check --aur"
@@ -36,3 +37,5 @@ if [ "$TERM" = "foot" ] && command -v tmux &>/dev/null; then
     trap 'tmux detach' EXIT
   fi
 fi
+
+kotofetch
