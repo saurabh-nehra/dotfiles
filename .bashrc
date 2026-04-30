@@ -15,16 +15,25 @@ export PATH="$HOME/.local/bin:$PATH:$HOME/bin"
 export MANPAGER="nvim +Man!"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+eval "$(pyenv init -)"
 alias eos_update="eos-update --faillock-check --aur"
 alias ls="eza --long --group-directories-first --binary --no-permissions --octal-permissions --icons --group"
 alias cd="z"
 alias cdi="zi"
 alias find="fd"
+alias du="dust"
 alias config='/usr/bin/git --git-dir=/home/saurabh/.cfg/ --work-tree=/home/saurabh'
 alias bats='BATS_RUN_SKIPPED=true command bats *.bats'
 alias rm='rip -i'
 alias playground='distrobox-enter arch-test -nw'
-alias mirror_update='sudo reflector --latest 20 --country India --sort rate --save /etc/pacman.d/mirrorlist'
+alias mirror_update='sudo reflector \
+--country India \
+--age 24 \
+--protocol https \
+--latest 20 \
+--number 10 \
+--sort rate \
+--save /etc/pacman.d/mirrorlist'
 # Only in foot terminal
 if [ "$TERM" = "foot" ] && command -v tmux &>/dev/null; then
   if [ -z "$TMUX" ]; then
