@@ -1,0 +1,10 @@
+[[openers]]
+run = "nvim %*"
+block = true
+desc = "Neovim"
+for = "text"
+rules:
+  - mime: text/x-ini
+    run: nvim "$1"
+    block: true
+
